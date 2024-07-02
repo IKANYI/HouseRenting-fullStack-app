@@ -12,7 +12,7 @@ function Hero(){
       </div>
       <div className="hero-button">
         <button className='login-button'>login</button>
-        <button className='signUp-button'>login</button>
+        <button className='signUp-button'>Sign Up</button>
       </div>
     </div>
   )
