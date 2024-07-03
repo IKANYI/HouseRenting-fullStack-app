@@ -1,7 +1,7 @@
-import HomeImg from '../assets/homeImg.svg'
-import './Major.css';
+import HomeImg from "../assets/homeImg.svg";
+import "./Major.css";
 function Home() {
-  return(
+  return (
     <>
       <div className="homeImg">
         <img src={HomeImg} alt="home image" />
@@ -15,8 +15,7 @@ function Home() {
       <div className="homeButton">
         <button>next</button>
       </div>
-
     </>
-  )
+  );
 }
-export default Home
+export default Home;
