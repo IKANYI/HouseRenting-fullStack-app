@@ -17,6 +17,6 @@ model Userdetails{
   id String @id @default(uuid())
   FirstName String
   LastName String
-  Email String
+  Email String @unique
   Password String
 }
