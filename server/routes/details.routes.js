@@ -1,4 +1,4 @@
-import Router from "express";
+import {Router} from "express";
 const router = Router();
 
 import {PrismaClient} from '@prisma/client'
@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
       LastName:LastName,
       Email:Email,
       Password: Password
-    },
+    },  
     select:{
       FirstName: true,
         LastName: true,
@@ -102,3 +102,5 @@ router.patch('/:id', async (req, res) => {
   }
 });
 export default router;
+
+
