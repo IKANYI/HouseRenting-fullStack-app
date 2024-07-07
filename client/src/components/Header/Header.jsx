@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import './Header.css';
 import { Link } from "react-router-dom";
 
-// Correctly define SocialInfo component with capital 'S'
+
 const SocialInfo = ({ icon, label }) => {
   return (
     <div className="header-social-top">
@@ -21,10 +21,10 @@ const Header = () => {
     <div className="main">
       <div className="header-top">
       <h1 className="logo">Keja Yangu</h1>
-      <div className="header-socials"> {/* Fixed typo: "header-cocials" to "header-socials" */}
+      <div className="header-socials"> 
         <SocialInfo icon={<MdEmail />} label="info@kejayangu.com" />
-        <SocialInfo icon={<FaLocationDot />} label="Nairobi City" /> {/* Added space for better readability */}
-        <SocialInfo icon={<FaPhoneAlt />} label="+254 790 058 715" /> {/* Added space for better readability */}
+        <SocialInfo icon={<FaLocationDot />} label="Nairobi City" /> 
+        <SocialInfo icon={<FaPhoneAlt />} label="+254 790 058 715" /> 
       </div>
       
     </div>

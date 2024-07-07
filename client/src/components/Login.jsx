@@ -1,4 +1,4 @@
-import "./Login.css"; // Import the CSS file
+import "./Login.css"; 
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
@@ -24,7 +24,7 @@ function Login() {
       }
 
       const data = await response.json();
-      console.log("Login successful:", data); // Handle data as needed
+      console.log("Login successful:", data);
 
     } catch (e) {
       setError(e.message);

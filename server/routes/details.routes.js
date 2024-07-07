@@ -2,14 +2,13 @@ import { Router } from "express";
 const router = Router();
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
-import bcrypt from 'bcrypt'; // Add this for password hashing
+import bcrypt from 'bcrypt';
 
-// Signup Route
+
 router.post("/", async (req, res) => {
   try {
     const { FirstName, LastName, Email, Password } = req.body;
 
-    // Hash the password before saving
     const hashedPassword = await bcrypt.hash(Password, 10);
 
     const newCustomer = await prisma.Userdetails.create({
@@ -32,35 +31,35 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Login Route
+
 router.post("/login", async (req, res) => {
   try {
     const { Email, Password } = req.body;
 
-    const user = await prisma.Userdetails.findUnique({
+    const user = await prisma.Userdetails.findFirst({
       where: { Email: Email }
     });
 
     if (!user) {
-      return res.status(400).json({ success: false, message: "User not found" });
+      return res.status(400).json({ success: false, message: "wrong email" });
     }
 
-    // Compare the provided password with the stored hashed password
+    
     const isPasswordValid = await bcrypt.compare(Password, user.Password);
 
     if (!isPasswordValid) {
-      return res.status(400).json({ success: false, message: "Invalid credentials" });
+      return res.status(400).json({ success: false, message: "Invalid password" });
     }
+    console.log(err.message);
 
     res.status(200).json({ success: true, message: "Login successful" });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
+    console.log(err);
   }
 });
 
-// Other routes remain the same...
 
-// Get all users
 router.get('/', async (req, res) => {
   try {
     const getAll = await prisma.Userdetails.findMany({
@@ -76,7 +75,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get user by ID
+
 router.get('/:id', async (req, res) => {
   const id = req.params.id;
   try {
@@ -94,7 +93,6 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Delete user by ID
 router.delete('/:id', async (req, res) => {
   const id = req.params.id;
   try {
@@ -112,7 +110,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// Update user by ID
+
 router.patch('/:id', async (req, res) => {
   const { FirstName, LastName, Email, Password } = req.body;
   const id = req.params.id;

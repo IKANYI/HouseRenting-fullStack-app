@@ -7,7 +7,7 @@ function Payment() {
   const [total, setTotal] = useState(0);
 
   const calculateTotal = (method, duration) => {
-    // Example rates: you can customize these
+   
     const rates = {
       "mpesa": 100,
       "bank": 150,

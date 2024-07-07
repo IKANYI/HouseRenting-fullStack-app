@@ -1,15 +1,19 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
-import './Signup.css'; // Import the CSS file
+import { useNavigate } from "react-router-dom";
+import './Signup.css'; 
 
 function SignUp() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (formValues) => {
     setLoading(true);
     setError("");
+    setSuccess("");
     try {
       const response = await fetch("http://localhost:3002/details", {
         method: "POST",
@@ -24,7 +28,14 @@ function SignUp() {
       }
 
       const data = await response.json();
-      console.log(data); // Handle data as needed
+      console.log(data); 
+
+      
+      setSuccess("Registration successful! Redirecting to login...");
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000); 
+
     } catch (e) {
       setError(e.message);
     } finally {
@@ -113,6 +124,7 @@ function SignUp() {
           {loading ? "Please wait..." : "Sign Up"}
         </button>
         {error && <p className="error">{error}</p>}
+        {success && <p className="success">{success}</p>}
       </form>
     </div>
   );

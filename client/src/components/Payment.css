@@ -1,4 +1,4 @@
-/* General reset for consistent styling */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Body styling to center the component */
+
 body {
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@ body {
   background-color: #f0f2f5;
 }
 
-/* Styling for the payment zone */
+
 .payment-zone {
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ body {
   padding: 20px;
 }
 
-/* Container for the payment form */
+
 .payment-container {
   background-color: #fff;
   padding: 30px;
@@ -33,14 +33,14 @@ body {
   text-align: center;
 }
 
-/* Header styling for the form */
+
 .payment-header {
   font-size: 1.5rem;
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Styling for the select dropdown */
+
 .payment-select {
   width: 100%;
   padding: 12px;
@@ -51,7 +51,7 @@ body {
   background-color: #fff;
 }
 
-/* Styling for the label */
+
 .payment-label {
   display: block;
   text-align: left;
@@ -60,7 +60,7 @@ body {
   color: #666;
 }
 
-/* Styling for the input field */
+
 .payment-input {
   width: 100%;
   padding: 12px;
@@ -71,7 +71,7 @@ body {
   background-color: #fff;
 }
 
-/* Styling for the total amount */
+
 .payment-total {
   font-size: 1.25rem;
   margin: 20px 0;
@@ -83,7 +83,7 @@ body {
   color: #007bff;
 }
 
-/* Styling for the button */
+
 .payment-button {
   padding: 12px 20px;
   background-color: #007bff;
@@ -96,7 +96,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Button hover effect */
+
 .payment-button:hover {
   background-color: #0056b3;
 }
@@ -106,7 +106,7 @@ body {
   cursor: not-allowed;
 }
 
-/* Responsive design for mobile view */
+
 @media (max-width: 480px) {
   .payment-container {
     padding: 20px;
