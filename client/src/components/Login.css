@@ -1,0 +1,89 @@
+/* General reset for consistent styling */
+
+/* Container for the login form */
+.login-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Styling for the login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input fields styling */
+.login-form input {
+  width: 50%;
+  padding: 14px 18px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Labels styling */
+.login-form label {
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+/* Error messages styling */
+.error {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+/* Submit button styling */
+.login-form button {
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading state for button */
+.login-form button[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-form input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .login-form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,35 @@
+.about{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1rem;
+  color: rgb(65, 43, 160);
+
+}
+@media screen  and (max-width:800px){
+  .about{
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+.about-t h2, .about-t p{
+  margin: 0;
+}
+.about-t{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.about-img{
+  width: 100%;
+
+}
+.about-img img{
+  height: 100%;
+  width:100%;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}

@@ -12,8 +12,7 @@ dd {
 }
 
 .homeImg {
-  height: 80vh;
-  border: solid 1px red;
+  height: 100vh;
   margin-bottom: 0.5rem;
 }
 .homeImg img {

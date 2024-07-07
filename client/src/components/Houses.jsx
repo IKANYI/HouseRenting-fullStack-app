@@ -1,4 +1,5 @@
 import "./Major.css";
+import { Link } from "react-router-dom";
 import house from "../assets/hero.png";
 function Houses() {
   return (
@@ -16,7 +17,7 @@ function Houses() {
           </p>
           <h4>Ksh 100,000 per Month</h4>
           <p>
-            <a href="">rent now</a>
+            <Link to="/payment">rent now</Link>
           </p>
         </div>
       </div>
@@ -30,7 +31,7 @@ function Houses() {
           </p>
           <h4>Ksh 100,000 per Month</h4>
           <p>
-            <a href="">rent now</a>
+          <Link to="/payment">rent now</Link>
           </p>
         </div>
         <div className="house-img">
@@ -50,7 +51,7 @@ function Houses() {
           </p>
           <h4>Ksh 100,000 per Month</h4>
           <p>
-            <a href="">rent now</a>
+          <Link to="/payment">rent now</Link>
           </p>
         </div>
       </div>
@@ -64,7 +65,7 @@ function Houses() {
           </p>
           <h4>Ksh 100,000 per Month</h4>
           <p>
-            <a href="">rent now</a>
+          <Link to="/payment">rent now</Link>
           </p>
         </div>
         <div className="house-img">
