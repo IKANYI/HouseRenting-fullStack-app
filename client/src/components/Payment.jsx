@@ -6,16 +6,7 @@ function Payment() {
   const [duration, setDuration] = useState("");
   const [total, setTotal] = useState(0);
 
-  const calculateTotal = (method, duration) => {
-   
-    const rates = {
-      "mpesa": 100,
-      "bank": 150,
-      "bank-transfer": 120,
-      "credit-card": 200,
-    };
-    return rates[method] * parseInt(duration, 10);
-  };
+  
 
   const handleMethodChange = (event) => {
     const method = event.target.value;
@@ -61,9 +52,9 @@ function Payment() {
           onChange={handleDurationChange}
         />
         <div className="payment-total">
-          <p>Total Amount: <span>${total ? total.toFixed(2) : "0.00"}</span></p>
+          <p>Total Amount: <span>${total ? "100000": "100000"}</span></p>
         </div>
-        <button className="payment-button" disabled={!paymentMethod || !duration}>PAY</button>
+        <button className="payment-button" >PAY</button>
       </div>
     </div>
   );
