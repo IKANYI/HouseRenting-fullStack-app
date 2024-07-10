@@ -180,3 +180,13 @@ dd {
   display: flex;
   flex-direction: column;
 }
+.addProduct{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: beige;
+}
+.addProduct input{
+  width: 50%;
+}

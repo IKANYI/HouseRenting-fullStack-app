@@ -1,9 +1,11 @@
 import "./Login.css"; 
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
+import {  useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -11,7 +13,7 @@ function Login() {
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("http://localhost:3002/login", {
+      const response = await fetch("http://localhost:3002/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,6 +27,7 @@ function Login() {
 
       const data = await response.json();
       console.log("Login successful:", data);
+      navigate("/")
 
     } catch (e) {
       setError(e.message);

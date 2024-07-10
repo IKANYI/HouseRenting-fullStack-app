@@ -33,7 +33,7 @@ const Header = () => {
           <ol className="header-nav-list">
             <li className="header-nav-item"> <Link to="/">Home</Link> </li>
             <li className="header-nav-item"><Link to="/house">Houses</Link></li>
-            <li className="header-nav-item"><Link to="/payment">Payment</Link></li>
+            <li className="header-nav-item"><Link to="/addproduct">Rent Yours Space</Link></li>
             <li className="header-nav-item"><Link to="/login">Login</Link></li>
             <li className="header-nav-item"><Link to="/signup">Signup</Link></li>
           </ol>
